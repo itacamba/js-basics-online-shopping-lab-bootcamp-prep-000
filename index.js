@@ -24,7 +24,7 @@ function addToCart(item) {
 //
 function viewCart() {
 var cartAsAString = [];
-var secondToOneBeforeLastItem = [];
+var allItemsButLast = [];
 var lastItem = cart[cart.length - 1];
 if(!cart.length){
   return `Your shopping cart is empty.`;
@@ -32,9 +32,9 @@ if(!cart.length){
   return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
 }
 for (let i= 0; i < cart.length - 1; i++){
-  secondToOneBeforeLastItem.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
+  allItemsButLast.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
 }
-return `In your cart, you have ${secondToOneBeforeLastItem}, and ${lastItem}.`;
+return `In your cart, you have ${allItemsButLast}, and ${lastItem.itemName} at $${lastItem.itemPrice}.`;
 }
 
 function total() {
