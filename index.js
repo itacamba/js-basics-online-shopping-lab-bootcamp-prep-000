@@ -39,9 +39,8 @@ return `In your cart, you have ${allItemsButLast.join(', ')}, and ${lastItem.ite
 
 function total() {
   var totalSum = 0;
-  // write your code here
-  for (let i = 0; i < cart.length ; i++ ){
-    totalSum += cart[i].itemPrice;
+  for(i = 0; i < cart.length ; i++){
+    totalSum = cart.itemPrice;
   }
   return totalSum;
 }
