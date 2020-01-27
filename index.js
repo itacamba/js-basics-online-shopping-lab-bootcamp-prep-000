@@ -31,7 +31,7 @@ if(!cart.length){
 } else if(cart.length === 1){
   return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
 }
-for (let i= 1; i < cart.length - 1; i++){
+for (let i= 0; i < cart.length - 1; i++){
   secondToOneBeforeLastItem.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
 }
 return `In your cart, you have ${secondToOneBeforeLastItem}, and ${lastItem}.`;
