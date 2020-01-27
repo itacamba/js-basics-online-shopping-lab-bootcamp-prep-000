@@ -40,7 +40,7 @@ return `In your cart, you have ${allItemsButLast.join(', ')}, and ${lastItem.ite
 function total() {
   var totalSum = 0;
   for(let i = 0; i < cart.length ; i++){
-    totalSum += cart.itemPrice;
+    totalSum += cart[i].itemPrice;
   }
   return totalSum;
 }
