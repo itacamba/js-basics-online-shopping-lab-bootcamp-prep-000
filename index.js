@@ -46,16 +46,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
-  var itemIndex = [];
-  function returnIndex(item){
-    itemIndex = cart.findIndex(x => x.itemName === item);
-    return itemIndex;
-  }
-  if (returnIndex(item) === -1){
-    return `That item is not in your cart.`;
-  } else {
-    cart.splice(itemIndex,1);
+  var itemToRemove = [];
+  for (let i=0; i<cart.length;i++){
+      if(item === cart[i].itemName){
+        itemToRemove = cart[i].itemName;
+        return indexOf(itemToRemove);
+      }
   }
 
 }
