@@ -34,7 +34,7 @@ if(!cart.length){
 for (let i= 0; i < cart.length - 1; i++){
   allItemsButLast.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
 }
-return `In your cart, you have ${allItemsButLast}, and ${lastItem.itemName} at $${lastItem.itemPrice}.`;
+return `In your cart, you have ${allItemsButLast.join(', ')}, and ${lastItem.itemName} at $${lastItem.itemPrice}.`;
 }
 
 function total() {
